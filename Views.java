@@ -6,19 +6,29 @@ import java.io.*;
 
 public class Views {
 
+static Robot robot;
 
 public static void main(String[] args) throws Exception{
+
+	/*
+	// start Chrome
+	robot.mouseMove(77,385);
+	robot.mousePress(InputEvent.BUTTON1_MASK); 
+	robot.mouseRelease(InputEvent.BUTTON1_MASK);
 	
+	*/
 	while(true) {		
-		video();
+		video(380, 85);
+		video(1111, 85);
+		video(350, 628);
+		video(1111, 630);
 		Thread.sleep(66 * 1000);    // vid last ~ 1 min
 	}
 }
 
-private static void video() throws Exception {
-Robot robot = new Robot();
-
-	robot.mouseMove(300,85); //you may want to move a few pixels closer to the center by adding to these values
+private static void video(int x, int y) throws Exception {
+	robot = new Robot();
+	robot.mouseMove(x,y); //you may want to move a few pixels closer to the center by adding to these values
 	robot.mousePress(InputEvent.BUTTON1_MASK); //BUTTON1_MASK is the left button,
 		                               //BUTTON2_MASK is the middle button, BUTTON3_MASK is the right button
 	robot.mouseRelease(InputEvent.BUTTON1_MASK);
@@ -54,5 +64,7 @@ clipboard.setContents(selection, selection);
 	Thread.sleep(200);    
 	robot.keyPress(KeyEvent.VK_ENTER);
         robot.keyRelease(KeyEvent.VK_ENTER);
+			Thread.sleep(200);    
+
 }
 }
