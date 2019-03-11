@@ -22,7 +22,7 @@ public static void main(String[] args) throws Exception{
 		video(1111, 85);
 		video(350, 628);
 		video(1111, 630);
-		Thread.sleep(66 * 1000);    // vid last ~ 1 min
+		Thread.sleep(22 * 1000);    // vid last ~ 1 min
 	}
 }
 
@@ -33,8 +33,8 @@ private static void video(int x, int y) throws Exception {
 		                               //BUTTON2_MASK is the middle button, BUTTON3_MASK is the right button
 	robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-	String str = "youtube.com/watch?v=1rOqFB2H7I4";
-   	/*
+	String str = "youtube.com/watch?v=fTPlnqnqDvY";
+   	/*https://www.youtube.com/watch?v=1rOqFB2H7I4
 	robot.keyPress(KeyEvent.VK_Y);
    	robot.keyRelease(KeyEvent.VK_Y);
    	robot.keyPress(KeyEvent.VK_O);
